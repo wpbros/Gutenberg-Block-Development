@@ -1,0 +1,17 @@
+{
+  	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "create-block/paragraph",
+	"version": "0.1.0",
+	"title": "Paragraph",
+	"category": "text",
+	"icon": "smiley",
+	"description": "This is an example paragraph block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "paragraph",
+	"editorScript": "file:../../../build/js/paragraph/paragraph.js",
+	"editorStyle": "file:../../../build/css/paragraph.css",
+	"style": "file:../../../build/css/style-paragraph.css"
+}
