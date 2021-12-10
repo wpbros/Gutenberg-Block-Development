@@ -1,0 +1,17 @@
+{
+  	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "create-block/block-one",
+	"version": "0.1.0",
+	"title": "Block One",
+	"category": "text",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "block-one",
+	"editorScript": "file:../../../build/js/block-one/block-one.js",
+	"editorStyle": "file:../../../build/css/block-one.css",
+	"style": "file:../../../build/css/style-block-one.css"
+}
