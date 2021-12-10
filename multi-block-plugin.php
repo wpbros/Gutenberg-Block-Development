@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Multi Block Plugin
  * Description:       Example block written with ESNext standard and JSX support – build step required.
@@ -22,17 +23,18 @@
  *
  */
 
-add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+add_filter('should_load_separate_core_block_assets', '__return_true');
 
 
-function create_block_multi_block_plugin_block_init() {
+function create_block_multi_block_plugin_block_init()
+{
 	$blocks = array(
-			'block-one/',
-			'block-two/'
+		'block-one/',
+		'paragraph'
 	);
 
-	foreach($blocks as $block) {
-		register_block_type( plugin_dir_path( __FILE__ ) . '/src/block-library/' . $block );
+	foreach ($blocks as $block) {
+		register_block_type(plugin_dir_path(__FILE__) . '/src/block-library/' . $block);
 	}
 }
-add_action( 'init', 'create_block_multi_block_plugin_block_init' );
+add_action('init', 'create_block_multi_block_plugin_block_init');
