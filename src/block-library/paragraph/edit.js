@@ -1,11 +1,20 @@
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 import './editor.scss';
 
-export default function Edit() {
+export default function Edit({ attributes: { content }, setAttributes }) {
+	
+	function editContentHandler(newVal) {
+		setAttributes({ content: newVal });
+	}
+	
 	return (
-		<p {...useBlockProps()}>
-			'Hello from the editor!'
-		</p>
+		<RichText 
+			{ ...useBlockProps() }
+			value={content}
+			onChange={editContentHandler}
+			tagName='p'
+			placeholder='Enter text here.'
+		/>
 	);
 }

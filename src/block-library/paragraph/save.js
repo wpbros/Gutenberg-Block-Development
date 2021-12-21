@@ -1,11 +1,13 @@
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 import "./editor.scss";
 
-export default function Edit() {
+export default function Edit( { attributes: { content } } ) {
     return (
-        <p {...useBlockProps.save()}>
-        'Hello from the front end!'
-        </p>
+        <RichText.Content 
+            { ...useBlockProps.save() } 
+            tagName="p"
+            value={content}
+        />
     );
 }
