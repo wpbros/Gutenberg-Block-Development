@@ -17,6 +17,12 @@
 	"attributes": {
 		"content": {
 			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
 		}
 	}
 }
